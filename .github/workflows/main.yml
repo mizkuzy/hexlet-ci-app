@@ -4,12 +4,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-#      сетап проекта, запуск тестов и линтера
       - uses: actions/checkout@v3
       - name: setup project
         run: make setup
       - name: run linter
         run: make lint
-#  test:
-#    needs: build
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: run tests
+        run: make test
 
