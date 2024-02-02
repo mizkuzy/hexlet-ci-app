@@ -1,7 +1,7 @@
 module.exports = {
   /**
    * An asynchronous register function that runs before
-   * -----
+   * ----- trst
    * your application is initialized.
    *
    * This gives you an opportunity to extend code.
